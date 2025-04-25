@@ -1,14 +1,14 @@
 import streamlit as st
 import numpy as np
-import pickle
+import pickle as pp
 import pandas as pd
 
 # Load trained model and scaler
 with open("model.pkl", "rb") as pickle_in1:
-    model = pickle.load(pickle_in1)
+    model = pp.load(pickle_in1)
     
 with open('scaler.pkl', 'rb') as pickle_in2:
-    scaler = pickle.load(pickle_in2)
+    scaler = pp.load(pickle_in2)
 
 st.title("🍷 Wine Quality Predictor")
 st.write("Enter the wine's chemical properties to predict its quality.")
