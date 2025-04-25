@@ -3,11 +3,11 @@ import numpy as np
 import pickle
 
 # Load trained model and scaler
-with open('model.pkl', 'rb') as f:
-    model = pickle.load(f)
+pickle_in1= open("model.pkl", "rb") 
+model = pickle.load(pickle_in1)
     
-with open('scaler.pkl', 'rb') as f:
-    scaler = pickle.load(f)
+pickle_in2= open('scaler.pkl', 'rb')
+scaler = pickle.load(pickle_in2)
 
 st.title("🍷 Wine Quality Predictor")
 st.write("Enter the wine's chemical properties to predict its quality.")
